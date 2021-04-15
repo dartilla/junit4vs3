@@ -1,5 +1,5 @@
 # junit4vs3
 
-MyTest заваливается с NPE в случае `public class MyTest extends TestCase {` - потому что запускает как junit3.
+MyTest fails with NPE in case `public class MyTest extends TestCase {` - this is where `-junit3` happens and `@Before` method is skipped.
 
-MyTest успешно отрабатывает в случае `public class MyTest {` - запуск как junit4, и `@Before` отрабатывает как должен.
+MyTest succeed in case `public class MyTest {` - this is where `-junit4` happens and `@Before` method executed as expected.
